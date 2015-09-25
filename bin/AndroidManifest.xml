@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hospitalsystem"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LookUpPatient"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_look_up_patient"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hospitalsystem.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CreateNewRecord"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_create_new_record"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hospitalsystem.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ConfirmPatient"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_confirm_patient"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hospitalsystem.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PreviousRecord"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_previous_record"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hospitalsystem.MainActivity" />
+        </activity>
+        <activity
+            android:name=".IndividualData"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_individual_data"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hospitalsystem.MainActivity" />
+        </activity>
+        <activity
+            android:name=".VisitRecord"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_visit_record"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hospitalsystem.MainActivity" />
+        </activity>
+        <activity
+            android:name=".VitalSignsUpdate"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_vital_signs_update"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hospitalsystem.MainActivity" />
+        </activity>
+        <activity
+            android:name=".NurseMain"
+            android:label="@string/title_activity_nurse_main"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name=".NewPatient"
+            android:label="@string/title_activity_new_patient"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name=".PhysicianMain"
+            android:label="@string/title_activity_physician_main"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name=".AddPrescription"
+            android:label="@string/title_activity_add_prescription"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name=".WaitingList"
+            android:label="@string/title_activity_waiting_list"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name=".PrescriptionDisplay"
+            android:label="@string/title_activity_prescription_display" >
+        </activity>
+        <activity
+            android:name=".AddTimeSeenByDoctor"
+            android:label="@string/title_activity_add_time_seen_by_doctor" >
+        </activity>
+        <activity
+            android:name=".Popup"
+            android:label="@string/title_activity_popup" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hospitalsystem.IndividualData" >
+
+    <TextView
+        android:id="@+id/individualTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/IndividualData"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/individualTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/individualTextView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="@string/placeholder"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dob"
+        android:layout_below="@+id/individualTextView2"
+        android:layout_marginTop="43dp"
+        android:text="@string/NameColon"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:text="@string/DOBColon"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/healthCardNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dob"
+        android:layout_below="@+id/dob"
+        android:text="@string/HCNColon"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/individualNewPrescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/viewPrevRecord"
+        android:layout_below="@+id/addTimeSeenByDoctor"
+        android:onClick="onClickPrescription"
+        android:text="@string/newPrescription" />
+
+    <Button
+        android:id="@+id/addTimeSeenByDoctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/individualTextView1"
+        android:layout_below="@+id/updateRecord"
+        android:onClick="OnClickAddVisit"
+        android:text="@string/addTimeSeenByDoctor" />
+
+    <TextView
+        android:id="@+id/errMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/healthCardNumber"
+        android:layout_below="@+id/healthCardNumber"
+        android:layout_marginTop="14dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/updateRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewPrevRecord"
+        android:layout_centerHorizontal="true"
+        android:onClick="clickUpdate"
+        android:text="@string/UpdateRecord" />
+
+    <Button
+        android:id="@+id/viewPrevRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/errMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:onClick="clickPrevRecord"
+        android:text="@string/ViewPreviousRecords" />
+
+</RelativeLayout>

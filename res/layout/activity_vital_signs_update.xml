@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hospitalsystem.VitalSignsUpdate" >
+        
+    <Button
+        android:id="@+id/save"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:text="@string/Save"
+        android:onClick="updateVitalSigns" />
+
+    <EditText
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/heartRate"
+        android:layout_below="@+id/heartRate"
+        android:ems="10"
+        android:hint="@string/addTemperature"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/sysPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/save"
+        android:layout_below="@+id/Date"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="@string/addSystolicPressure"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/diaPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sysPressure"
+        android:layout_below="@+id/sysPressure"
+        android:ems="10"
+        android:hint="@string/addDiastolicPressure"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/heartRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/diaPressure"
+        android:ems="10"
+        android:hint="@string/addHeartRate"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/currentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/temperature"
+        android:layout_below="@+id/temperature"
+        android:text="@string/currentT" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sysPressure"
+        android:layout_alignBottom="@+id/sysPressure"
+        android:layout_alignParentLeft="true"
+        android:text="@string/SystolicColon" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/diaPressure"
+        android:layout_alignBottom="@+id/diaPressure"
+        android:layout_alignParentLeft="true"
+        android:text="@string/DiastolicColon" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/heartRate"
+        android:layout_alignBottom="@+id/heartRate"
+        android:layout_alignRight="@+id/textView2"
+        android:text="@string/HeartRateColon" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/temperature"
+        android:layout_alignBottom="@+id/temperature"
+        android:layout_alignLeft="@+id/textView3"
+        android:text="@string/TemperatureColon" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/vitalSignsTime"
+        android:layout_alignBottom="@+id/vitalSignsTime"
+        android:layout_alignRight="@+id/textView4"
+        android:text="@string/TimeColon" />
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/VitalSignsUpdate"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/vitalSignsTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/currentTime"
+        android:layout_below="@+id/currentTime"
+        android:ems="10"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/successInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:maxLines="1" />
+
+</RelativeLayout>

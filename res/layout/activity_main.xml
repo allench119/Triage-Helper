@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/MainTextView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/MaintextView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:gravity="center"
+        android:text="@string/AppName"
+        android:textSize="41sp" />
+
+    <TextView
+        android:id="@+id/MaintextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="@string/Welcome"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/MainUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/MainTextView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:ems="10" 
+        android:hint ="@string/Username">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/MainPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/MainUserName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:inputType="textPassword" 
+        android:hint = "@string/Password"/>
+
+    <TextView
+        android:id="@+id/maintest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/MainUserName"
+        android:layout_below="@+id/MainPassword"
+        android:layout_marginTop="15dp"
+         />
+
+    <Button
+        android:id="@+id/MainLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/maintest"
+        android:layout_marginTop="43dp"
+        android:layout_toRightOf="@+id/MaintextView1"
+        android:onClick="onClick"
+        android:text="@string/LogIn" />
+
+    <TextView
+        android:id="@+id/LoginFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/MainPassword"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

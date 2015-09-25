@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hospitalsystem.PhysicianMain" >
+
+    <TextView
+        android:id="@+id/physicianFeatureSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:textSize="25sp"
+        android:text="@string/SelectFeature" />
+
+    <Button
+        android:id="@+id/newPrescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/physicianLookUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="@string/newPrescription"
+        android:onClick="onClickPrescription" />
+
+    <Button
+        android:id="@+id/physicianLookUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/physicianFeatureSelect"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:text="@string/LookUpPatient"
+        android:onClick="onClickLookUp" />
+
+</RelativeLayout>

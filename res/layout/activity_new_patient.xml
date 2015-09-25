@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hospitalsystem.NewPatient" >
+
+    <TextView
+        android:id="@+id/patientInfoInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:text="@string/patientInfoInput" />
+
+    <EditText
+        android:id="@+id/newPatientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/patientInfoInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/InputPatientName" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/newPatientHCN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/patientDOB"
+        android:layout_below="@+id/patientDOB"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/HCNhint" />
+
+    <EditText
+        android:id="@+id/patientDOB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/newPatientName"
+        android:layout_below="@+id/newPatientName"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="@string/DOBformat"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/newPatientConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/newPatientHCN"
+        android:layout_below="@+id/newPatientHCN"
+        android:layout_marginTop="22dp"
+        android:onClick="onClick"
+        android:text="@string/Confirm" />
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/newPatientHCN"
+        android:layout_below="@+id/newPatientHCN" />
+
+</RelativeLayout>
